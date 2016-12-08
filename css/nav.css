@@ -1,0 +1,17 @@
+#navigation {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+#navigation li a {
+  color: white !important;
+  opacity: 1 !important;
+}
+#navigation li a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+#navigation img {
+  width: 200px;
+}

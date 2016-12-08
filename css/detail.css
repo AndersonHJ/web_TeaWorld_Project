@@ -1,0 +1,35 @@
+.red{
+    color:red;
+}
+.yellow{
+    color:yellow;
+}
+.green{
+    color:green;
+}
+.blue{
+    color:deepskyblue;
+}
+.gold{
+    color:gold;
+}
+li{
+    list-style: none;
+}
+.font-medium{
+    font-size: medium;
+}
+.gray{
+    color:gray;
+}
+.bold{
+    font-weight: bold;
+}
+.pane-detail{
+    height:300px;
+
+}
+.pane-comment{
+    height:300px;
+    overflow-y: scroll;
+}

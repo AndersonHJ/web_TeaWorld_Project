@@ -1,0 +1,14 @@
+html {
+  background-color: #51900d;
+}
+.fontstyle1 {
+  font-family: cursive;
+}
+.fontstyle1 h1,
+.fontstyle1 h3 {
+  font-weight: bolder;
+}
+.fontstyle2 {
+  font-family: monospace, sans-serif;
+  font-weight: bold;
+}

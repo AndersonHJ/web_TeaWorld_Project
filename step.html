@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            if( document.getElementById("soil").src.endsWith("soil.jpg")){
+                document.getElementById("soil").src="img/seed1.jpg";
+                return;
+            }
+            if( document.getElementById("soil").src.endsWith("seed1.jpg")){
+                document.getElementById("soil").src="img/seed.gif";
+                return;
+            }
+            if( document.getElementById("soil").src.endsWith("seed.gif")){
+                document.getElementById("soil").src="img/stem1.gif";
+            }
+        }
+
+        function cutdown(){
+           document.getElementById("soil").style.cursor="url('img/cut0.png') 4 6, auto";
+            var scrollX = window.event.clientX;
+            var scrollY = window.event.clientY;
+            document.getElementById("mouselocation").innerHTML='x:'+scrollX+  ' y:'+scrollY;
+            //alert("x:"+scrollX+ "   y:"+scrollY);
+        }
+    </script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+        }
+        .carousel-control.carousel-control-width5{
+            width:5%;
+        }
+    </style>
+    <title>Detail</title>
+</head>
+<body>
+
+
+<div id="navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="img/icon/icon_big_char.png" class="logo">
+        </div>
+        <div class="collapse navbar-right navbar-collapse navbar-main-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">home</a></li>
+                <li><a href="">product</a></li>
+                <li><a href="manufacture.html">manufacture</a></li>
+                <li><a href="">effect</a></li>
+                <li><a href="">checkout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">SubCategory</a></li>
+        <li class="active">ProductDetail</li>
+    </ol>
+</div>
+
+<div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+
+            <iframe class="" width="100%" height="450" src="https://www.youtube.com/embed/Yi-nhnWIcAU?autoplay=0" frameborder="1" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4">
+
+
+            <div id="div1" style="text-align: center; width: 100%;height: 450px;padding: 10px;border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+               <img  id="soil" style="cursor: url('img/cut.png') 4 6, auto"
+                     src="img/soil.jpg" onmousedown="cutdown();" onmouseup="this.style.cursor='url(img/cut.png) 4 6, auto';"/>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-md-2">
+            <p>Drag Your Seed Into the Filed</p>
+            <img id="seed" src="img/teaseed.png" draggable="true" ondragstart="drag(event)" width="50" height="50"/>
+            <br>
+            <img id="water" src="img/water.png" draggable="true" ondragstart="drag(event)" width="45" height="45"/>
+            <br>
+            <img id="water1" src="img/water.png" draggable="true" ondragstart="drag(event)" width="45" height="45"/>
+            <p id="mouselocation"></p>
+        </div>
+</div>
+
+
+
+
+</body>
+<footer>
+    <div id="logo" class="col-md-4 col-sm-4 col-xs-12">
+        <img src="img/icon/Icon-white.png">
+    </div>
+    <div id="address" class="col-md-4 col-sm-4 col-xs-12">
+        <h3>University address</h3>
+        <h4>Street: 401 Terry Avenue</h4>
+        <h4>City: Seattle</h4>
+        <h4>State: WA</h4>
+    </div>
+    <div id="email" class="col-md-4 col-sm-4 col-xs-12">
+        <h3>Send Mail to us</h3>
+        <p ><a href="mailto:JianHou@northeastern.com" target="_top">lakers@tea.org.com</a></p>
+    </div>
+
+    <div id="right" class="col-md-12 col-sm-12 col-xs-12">
+        <p >The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
+        <p ><i>copyright@2016 Jian Hou</i></p>
+    </div>
+
+</footer>
+</html>
