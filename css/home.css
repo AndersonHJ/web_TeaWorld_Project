@@ -13,59 +13,125 @@ body {
   -webkit-flex-direction: column;
 }
 body > div {
-  padding: 7vw 0;
+ // padding: 7vw 0;
 }
 #banner {
-  height: 70vw;
+  height: 75vw;
   background-color: grey;
   padding-top: 0;
 }
 #banner img {
   height: 70vw;
 }
-#effect {
-  background-image: url("/TeaWorld/img/greenback.jpg");
-  background-size: cover;
+#pointer {
+  position: absolute;
+  z-index: 13;
+  top: 75%;
+  left: 44%;
   /*485b24
 	E0EFD0*/
 }
-#effect .subrow {
-  display: flex;
-  display: -webkit- flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  justify-content: center;
-  -webkit-justifiy-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  align-content: stretch;
-  -webkit-align-content: stretch;
-  flex-direction: row;
-  -webkit-flex-direction: row;
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
-#effect img {
-  background-color: white;
-  height: 35vw;
+.btn-circle:hover,
+.btn-circle:focus {
+  outline: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
 }
-#effect > div {
-  text-align: center;
+.btn-circle i.animated {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
 }
-#effect .item,
-#effect .item2 {
-  padding: 2vw 0;
-  display: flex;
-  display: -webkit- flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  justify-content: flex-start;
-  -webkit-justifiy-content: flex-start;
-  -webkit-align-items: center;
-  align-items: center;
-  align-content: stretch;
-  -webkit-align-content: stretch;
-  flex-direction: row;
-  -webkit-flex-direction: row;
+.btn-circle:hover i.animated {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
 }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+// #effect .subrow {
+//   display: flex;
+//   display: -webkit- flex;
+//   flex-wrap: wrap;
+//   -webkit-flex-wrap: wrap;
+//   justify-content: center;
+//   -webkit-justifiy-content: center;
+//   -webkit-align-items: center;
+//   align-items: center;
+//   align-content: stretch;
+//   -webkit-align-content: stretch;
+//   flex-direction: row;
+//   -webkit-flex-direction: row;
+// }
+// #effect img {
+//   background-color: white;
+//   height: 35vw;
+// }
+// #effect > div {
+//   text-align: center;
+// }
+// #effect .item,
+// #effect .item2 {
+//   padding: 2vw 0;
+//   display: flex;
+//   display: -webkit- flex;
+//   flex-wrap: wrap;
+//   -webkit-flex-wrap: wrap;
+//   justify-content: flex-start;
+//   -webkit-justifiy-content: flex-start;
+//   -webkit-align-items: center;
+//   align-items: center;
+//   align-content: stretch;
+//   -webkit-align-content: stretch;
+//   flex-direction: row;
+//   -webkit-flex-direction: row;
+// }
 #recommandation {
   color: white;
   background-image: url("/TeaWorld/img/general/7.jpg");
@@ -176,7 +242,7 @@ body > div {
     font-size: 1.6vw;
   }
   #recommandation {
-    height: 53vw;
+    height: 55vw;
   }
   #recommandation .fontstyle1 h1 {
     font-size: 5vw;

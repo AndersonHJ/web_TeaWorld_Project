@@ -1,41 +1,71 @@
-* {
-  margin:0;
-  padding:0;
-}
 
 #bodyforwrap {
   text-align:center;
-  background-color: #D6A712;
-  $experimental-support-for-svg: true;
+  
+  background-color: #f3de9e;
+  padding: 3vw 0vw 0vw 0vw;
+}
+
+.spaceTitle{
+  padding-top: 1vw;
+  padding-bottom: 7vw;
+}
+
+#happiness{
+  background-color: #3f3f3f;
+}
+#beauty{
+  background-color: #82553c;
+}
+#health{
+  background-color: #d0b76c;
+
+}
+#happiness .subpoint{
+  background-color: #3f3f3f;
+}
+#beauty .subpoint{
+  background-color: #82553c;
+}
+#health .subpoint{
+  background-color: #d0b76c;
+}
+
+.subpoint{
+    color: white;
+   transform: translateY(-50%);
+    position: relative;
+    left: 30%;
+    width: 13vw;
+    height: 13vw;
+    margin-top: 15px;
+    padding: 4vw 1px;
+    border-radius: 100% !important;
+    border: 10px solid grey;
+}
+
+.subpoint h3{
+  //transform: translateY(-300%);
 }
 
  .wrap {
-  width:1200px;
-  height:770px;
-  margin:auto;
   text-align:center;
-  color:#989A8F;
 }
 
  .table {
-  background-color:#F2E3B4; 
-  height:600px;
+  height:100%;
   width:100%;
   margin-top:50px; 
-  border-radius: 25px; 
+   
 }
 
  .table ul li {
-  float:left;
-  width:399px;
-  height: 300px;
+  list-style: none;
   text-align:center;
-  border-left:1px solid #D6A712;
 }
 
  .top {
-  background-color:#EAE9E4;
-  height:45px;
+  vertical-align: middle;
 }
 
  .circle {
@@ -51,7 +81,7 @@
 }
 
  .bottom {
-margin-top:125px;
+
   p {
      font-size:13px;
      font-family: 'Droid Serif', sans-serif;
