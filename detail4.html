@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <link rel="stylesheet" type="text/css" href="css/interactive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.quatities = [
+                {qty : "1", id:"1"},
+                {qty : "2", id:"2"},
+                {qty : "3", id:"3"},
+                {qty : "4", id:"4"}
+            ];
+
+
+
+            $scope.states = [
+                {Value : "AL", name : "Alabama", freight:"5.00", tax:"0.0891"},
+                {Value : "AK", name : "Alaska", freight:"9.99", tax:"0.0176"},
+                {Value : "AZ", name : "Arizona", freight:"5.99" , tax:"0.0817"},
+                {Value : "AR", name : "Arkansas", freight:"5.00", tax:"0.0926"},
+                {Value : "CA", name : "California", freight:"5.00", tax:"0.0844"},
+                {Value : "CO", name : "Colorado", freight:"6.00", tax:"0.0744"},
+                {Value : "CT", name : "Connecticut", freight:"6.99", tax:"0.0635"},
+                {Value : "DE", name : "Delaware", freight:"5.99", tax:"0.0"},
+
+                {Value : "DC", name : "District Of Columbia", freight:"8.99", tax:"0.0575"},
+                {Value : "FL", name : "Florida", freight:"7.88", tax:"0.0665"},
+                {Value : "GA", name : "Georgia", freight:"5.00", tax:"0.0696"},
+                {Value : "HI", name : "Hawaii", freight:"5.99", tax:"0.0435"},
+                {Value : "ID", name : "Idaho", freight:"5.99", tax:"0.0601"},
+                {Value : "IL", name : "Illinois", freight:"5.00", tax:"0.0819"},
+                {Value : "IN", name : "Indiana", freight:"5.00", tax:"0.07"},
+                {Value : "IA", name : "Iowa", freight:"5.00", tax:"0.0678"},
+
+                {Value : "KS", name : "Kansas", freight:"5.99" ,tax:"0.0678"},
+                {Value : "KY", name : "Kentucky", freight:"5.99", tax:"0.0678"},
+                {Value : "LA", name : "Louisiana", freight:"8.88", tax:"0.0678"},
+                {Value : "ME", name : "Maine", freight:"9.99", tax:"0.0678"},
+                {Value : "MD", name : "Maryland", freight:"9.65", tax:"0.0678"},
+                {Value : "MA", name : "Massachusetts", freight:"9.88", tax:"0.0678"},
+                {Value : "MI", name : "Michigan", freight:"8.89", tax:"0.0678"},
+                {Value : "MN", name : "Minnesota", freight:"5.98", tax:"0.0678"},
+
+                {Value : "MS", name : "Mississippi", freight:"5.00", tax:"0.0678"},
+                {Value : "MT", name : "Montana", freight:"5.87", tax:"0.0678"},
+                {Value : "MO", name : "Missouri", freight:"5.80", tax:"0.0678"},
+                {Value : "NE", name : "Nebraska", freight:"5.23", tax:"0.0678"},
+                {Value : "NV", name : "Nevada", freight:"5.00", tax:"0.0678"},
+                {Value : "NH", name : "New Hampshire", freight:"5", tax:"0.0678"},
+                {Value : "NJ", name : "New Jersey", freight:"5", tax:"0.0678"},
+                {Value : "NM", name : "New Mexico", freight:"5", tax:"0.0678"},
+                {Value : "NY", name : "New York", freight:"5", tax:"0.0678"},
+
+                {Value : "NC", name : "North Carolina", freight:"5", tax:"0.0678"},
+                {Value : "ND", name : "North Dakota", freight:"5", tax:"0.0678"},
+                {Value : "OH", name : "Ohio", freight:"5", tax:"0.0678"},
+                {Value : "OK", name : "Oklahoma", freight:"5", tax:"0.0678"},
+                {Value : "OR", name : "Oregon", freight:"5", tax:"0.0678"},
+                {Value : "PA", name : "Pennsylvania", freight:"5", tax:"0.0678"},
+                {Value : "RI", name : "Rhode Island", freight:"5", tax:"0.0678"},
+                {Value : "SC", name : "South Carolina", freight:"5", tax:"0.0678"},
+                {Value : "SD", name : "South Dakota", freight:"5", tax:"0.0678"},
+
+                {Value : "TN", name : "Tennessee", freight:"5", tax:"0.0678"},
+                {Value : "TX", name : "Texas", freight:"5", tax:"0.0678"},
+                {Value : "UT", name : "Utah", freight:"5", tax:"0.0678"},
+                {Value : "VA", name : "Virginia", freight:"5", tax:"0.0678"},
+                {Value : "VT", name : "Vermont", freight:"5", tax:"0.0678"},
+                {Value : "WV", name : "West Virginia", freight:"5", tax:"0.0678"},
+                {Value : "WA", name : "Washington", freight:"5", tax:"0.0678"},
+                {Value : "WI", name : "Wisconsin", freight:"5", tax:"0.0678"},
+                {Value : "WY", name : "Wyoming", freight:"5", tax:"0.0678"}
+
+            ];
+
+
+        });
+
+        function addcart(){
+            var teaname=document.getElementById("teaname").innerHTML;
+            window.open("cart.html?teaname="+teaname, "myWindow", "width=500, height=500,left=500,top=100");
+
+        }
+    </script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+        }
+        .carousel-control.carousel-control-width5{
+            width:5%;
+        }
+    </style>
+    <title>Detail</title>
+</head>
+<body>
+<div id="navigation" class="navbar navbar-default navbar-fixed-top" gender="navigation">
+             <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="img/icon/icon_big_char.png" class="logo">
+                </div>
+                <div class="collapse navbar-right navbar-collapse navbar-main-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="item.html">products</a></li>
+                        <li><a href="step.html">manufacture</a></li>
+                        <li><a href="cartlist.html">cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+
+    <div id="interTitle" class="fontstyle1">
+        <h1>Learn about all the tea we have</h1>
+    </div>
+
+<div class="prodetail">
+    <div class="container prod">
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="img/tea/tea5-1.jpg" alt="Chania" width="460" height="345">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="img/tea/tea5-2.jpg" alt="Chania" width="460" height="345">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="img/tea/tea5-3.jpg" alt="Flower" width="460" height="345">
+
+                    </div>
+
+                    <a class="left carousel-control carousel-control-width5" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control carousel-control-width5" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 cont" ng-app="myApp" ng-controller="myCtrl" ng-init="price=16.99">
+            <ul style="font-size: large">
+                <li><span id="teaname" class="bold">Longjing Green Tea</span> </li>
+                <li><span class="gray">Price: </span><span class="red bold">{{price| currency }}</span></li>
+                <li><span class="gray">Shipment: </span><br> From <span class="bold font-medium">Seattle WA </span>to
+                    <select ng-model="selectedState" ng-options="x.name for x in states">   </select> </li>
+                <li><span class="gray">Freight:</span><span class="red bold">{{selectedState.freight| currency }}</span></li>
+                <li><span class="gray">Tax: </span><span class="red bold" >{{selectedState.tax*price | currency }}</span></li>
+                <li><span class="gray">Monthly Sale: </span>20292</li>
+                <li><span class="gray">Qty: </span><select ng-model="selectedQty" ng-options="x.qty for x in quatities" >  </select></li>
+                <li><span class="gray">Stock Number: </span>1754</li>
+                <li><span class="gray">Total Due: <span class="red bold">{{selectedQty.qty *price+selectedState.tax*price*selectedQty.qty  | currency   }}</span></span></li>
+
+            </ul>
+
+           <a href="cartlist.html"><button class="btn btn-warning">Buy and Check out</button></a>
+            <button class="btn btn-danger" onclick="addcart()">Add to Cart</button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container prod">
+    <hr>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Prodcut Detail</a></li>
+        <li><a data-toggle="tab" href="#menu1">Comment</a></li>
+
+    </ul>
+
+    <div class="tab-content cont">
+        <div id="home" class="tab-pane fade in active pane-detail" >
+            <h3>Product Detail</h3>
+            <ul>
+                <li>Delicious hand sewn tea leaves that bloom in front of your eyes when steeped in water, adding a touch of elegance to your teatime</li>
+                <li>A variety of 7 beautiful flavors, including Cherry, Peach, Strawberry, Black Currant, Raspberry, and Cactus Melon</li>
+                <li>All natural fruit flavoring extracted from fruit pulp, and certified to be free from chemicals and heavy metals</li>
+                <li>Full of antioxidants and nutrients to give you the full benefit of green tea and calendula flowers</li>
+                <li>100% money back guarantee. If you are not completely satisfied with your purchase, just get in touch with us and we will give you a full refund!</li>
+
+            </ul>
+        </div>
+        <div id="menu1" class="tab-pane fade pane-comment" >
+            <br>
+            <div>
+                <i class="fa fa-star gold"></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star-o" ></i>
+
+                <span class="bold">OMG, I love this tea!!!</span>
+                <h6 class="red">by CustomerXXX  <span class="gray">on October 12, 2013</span></h6>
+                <p>This is my first time trying a blooming type tea. I opened the metal canister and found individually packed little balls of tea.
+                    I reviewed the instructions and chose a tea to try out. I don't have a glass tea pot but I do have glass bowls.
+                    I boiled water and poured it into the glass bowl with the peach flavored tea ball. It was so neat to see it open up or bloom.
+                    It opened up and after a few minutes I had peach tea. The tea itself is really good. It tastes like peach with a little tea taste.
+                    I've also tried the melon flavor and that one was great too. I am looking to purchase a glass tea pot and saving the others to show my friends
+                    because the presentation of the tea blooming is a show in itself. The tea I received has over a year to go until it expires so I have some time.
+                    Great stuff.
+                </p>
+            </div>
+
+            <br>
+            <div>
+                <i class="fa fa-star gold" style="border: 1px"></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star gold" ></i>
+
+                <span class="bold">OMG, I love this tea!!!</span>
+                <h6 class="red">by CustomerXXX  <span class="gray">on September 16, 2014</span></h6>
+                <p>This is my first time trying a blooming type tea. I opened the metal canister and found individually packed little balls of tea.
+                    I reviewed the instructions and chose a tea to try out. I don't have a glass tea pot but I do have glass bowls.
+                    I boiled water and poured it into the glass bowl with the peach flavored tea ball. It was so neat to see it open up or bloom.
+                    I've also tried the melon flavor and that one was great too. I am looking to purchase a glass tea pot and saving the others to show my friends
+                    because the presentation of the tea blooming is a show in itself. The tea I received has over a year to go until it expires so I have some time.
+                    Great stuff.
+                </p>
+            </div>
+
+            <br>
+            <div>
+                <i class="fa fa-star gold" style="border: 1px"></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star gold" ></i>
+                <i class="fa fa-star-o" ></i>
+                <i class="fa fa-star-o" ></i>
+
+                <span class="bold">OMG, I love this tea!!!</span>
+                <h6 class="red">by CustomerXXX  <span class="gray">on May 12, 2015</span></h6>
+                <p>This is my first time trying a blooming type tea. I opened the metal canister and found individually packed little balls of tea.
+                    I reviewed the instructions and chose a tea to try out. I don't have a glass tea pot but I do have glass bowls.
+                    I boiled water and poured it into the glass bowl with the peach flavored tea ball. It was so neat to see it open up or bloom.
+                    It opened up and after a few minutes I had peach tea. The tea itself is really good. It tastes like peach with a little tea taste.
+                    I've also tried the melon flavor and that one was great too. I am looking to purchase a glass tea pot and saving the others to show my friends
+                    because the presentation of the tea blooming is a show in itself. The tea I received has over a year to go until it expires so I have some time.
+                    Great stuff.This is my first time trying a blooming type tea. I opened the metal canister and found individually packed little balls of tea.
+                    I reviewed the instructions and chose a tea to try out. I don't have a glass tea pot but I do have glass bowls.
+                    I boiled water and poured it into the glass bowl with the peach flavored tea ball. It was so neat to see it open up or bloom.
+                    It opened up and after a few minutes I had peach tea. The tea itself is really good. It tastes like peach with a little tea taste.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+<footer>
+    <div id="logo" class="col-md-4 col-sm-4 col-xs-12">
+        <img src="img/icon/Icon-white.png">
+    </div>
+    <div id="address" class="col-md-4 col-sm-4 col-xs-12">
+        <h3>University address</h3>
+        <h4>Street: 401 Terry Avenue</h4>
+        <h4>City: Seattle</h4>
+        <h4>State: WA</h4>
+    </div>
+    <div id="email" class="col-md-4 col-sm-4 col-xs-12">
+        <h3>Send Mail to us</h3>
+        <p ><a href="mailto:JianHou@northeastern.com" target="_top">lakers@tea.org.com</a></p>
+    </div>
+
+    <div id="right" class="col-md-12 col-sm-12 col-xs-12">
+        <p >The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
+        <p ><i>copyright@2016 Jian Hou</i></p>
+    </div>
+
+</footer>
+</html>

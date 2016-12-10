@@ -2,22 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <link rel="stylesheet" type="text/css" href="css/interactive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
     <title>cartlist</title>
 
 </head>
 
 <body>
 
+<div id="navigation" class="navbar navbar-default navbar-fixed-top" gender="navigation">
+             <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="img/icon/icon_big_char.png" class="logo">
+                </div>
+                <div class="collapse navbar-right navbar-collapse navbar-main-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="item.html">products</a></li>
+                        <li><a href="step.html">manufacture</a></li>
+                        <li><a href="cartlist.html">cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+             </div>
+        </div>
 
+    <div id="interTitle" class="fontstyle1 col-md-12 col-sm-12 col-xs-12">
+        <h1>We have the most healthy tea</h1>
+    </div>
 <!-- begin:content -->
 <div class="container">
           <!-- begin:article -->
@@ -26,7 +54,7 @@
         <div class="col-md-3 col-sm-4 sidebar">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="widget">
+                    <div class="widget carts">
                         <div class="widget-title">
                             <h3>Cart</h3>
                         </div>
@@ -59,12 +87,7 @@
                             </li>
                             <li>
                                 <div class="row">
-                                    <div class="col-sm-6 col-xs-6">
-                                        <a class="btn btn-default" href="cart.html">Cart</a>
-                                    </div>
-                                    <div class="col-sm-6 col-xs-6 text-right">
-                                        <a class="btn btn-primary" href="login.html">Checkout</a>
-                                    </div>
+                                    
                                 </div>
                             </li>
                         </ul>
@@ -75,10 +98,10 @@
                             <h3>Navigation</h3>
                         </div>
                         <ul class="nav nav-pills nav-stacked">
-                            <li class="active"><a href="#">Cart</a></li>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Product List</a></li>
-                            <li><a href="#">???</a></li>
+                            <li class="active"><a href="cartlist.html">Cart</a></li>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="item.html">Product List</a></li>
+                            
                         </ul>
                     </div>
                     <!-- break -->
@@ -108,7 +131,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td><img width="100" src="img/longjing1.jpg" class="img-cart" /></td>
+                            <td class="col-md-3"><img src="img/tea/tea4-3.jpg" class="img-cart img-responsive" /></td>
                             <td><strong>BlackBox</strong><p>Size : 26</p></td>
                             <td>
                                 <form class="form-inline">
@@ -121,7 +144,7 @@
                             <td>$54.00</td>
                         </tr>
                         <tr>
-                            <td><img width="100" src="img/tea-1.jpg" class="img-cart" /></td>
+                            <td class="col-md-3"><img src="img/tea/tea4-1.jpg" class="img-cart img-responsive" /></td>
                             <td><strong>JunkShirt</strong><p>Size : M</p></td>
                             <td>
                                 <form class="form-inline">
@@ -150,7 +173,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <a href="categories.html" class="btn btn-default">Continue Shopping</a>
+                    <a href="item.html" class="btn btn-default">Continue Shopping</a>
                     <a href="checkout.html" class="btn btn-primary pull-right">Next</a>
                 </div>
             </div>
@@ -169,4 +192,25 @@
 
 
 </body>
+<footer>
+            <div id="logo" class="col-md-4 col-sm-4 col-xs-12">
+                <img src="img/icon/Icon-white.png" class="footerLogo">
+            </div>
+            <div id="address" class="col-md-4 col-sm-4 col-xs-12">
+                <h3>University address</h3>
+        <h4>Street: 401 Terry Avenue</h4>
+        <h4>City: Seattle</h4>
+        <h4>State: WA</h4>
+            </div>
+            <div id="email" class="col-md-4 col-sm-4 col-xs-12">
+                <h3>Send Mail to us</h3>
+                <p ><a href="mailto:JianHou@northeastern.com" target="_top">lakers@tea.org.com</a></p>
+            </div>
+
+            <div id="right" class="col-md-12 col-sm-12 col-xs-12">
+                <p >The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
+                <p ><i>copyright@2016 Laker's</i></p>
+            </div>
+        
+    </footer>
 </html>

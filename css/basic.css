@@ -1,6 +1,9 @@
 html {
   background-color: #f3de9e;
 }
+body{
+	background-color: #f3de9e !important;
+}
 .fontstyle1 {
   font-family: cursive;
 }

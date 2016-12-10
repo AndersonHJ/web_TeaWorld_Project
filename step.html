@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <link rel="stylesheet" type="text/css" href="css/interactive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -138,41 +139,37 @@
     <title>Detail</title>
 </head>
 <body>
+    <div id="navigation" class="navbar navbar-default navbar-fixed-top" gender="navigation">
+             <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="img/icon/icon_big_char.png" class="logo">
+                </div>
+                <div class="collapse navbar-right navbar-collapse navbar-main-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="item.html">products</a></li>
+                        <li><a href="step.html">manufacture</a></li>
+                        <li><a href="cartlist.html">cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+             </div>
+        </div>
 
 
-<div id="navigation" class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <img src="img/icon/icon_big_char.png" class="logo">
-        </div>
-        <div class="collapse navbar-right navbar-collapse navbar-main-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li><a href="home.html">home</a></li>
-                <li><a href="">product</a></li>
-                <li><a href="manufacture.html">manufacture</a></li>
-                <li><a href="">effect</a></li>
-                <li><a href="">checkout</a></li>
-            </ul>
-        </div>
-    </div>
+<div id="interTitle" class="col-md-12 col-sm-12 fontstyle1">
+    <h1>Experience the whole process of grow up of tea</h1>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
-<div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
+<div class="row workarea col-md-12 col-sm-12">
+        <div class="col-md-1"></div>
+        <div id="instruction" class="col-md-4 col-sm-6">
                 <div class="textframe">
                     <h3 id="title">Inroduction of Tea</h3>
                     <p id="p1">Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis,
@@ -183,16 +180,14 @@
                     <p id="p2">
                         Tea originated in Southwest China, where it was used as a medicinal drink. It was popularized as a recreational drink during the Chinese Tang dynasty,
                         and tea drinking spread to other East Asian countries. Portuguese priests and merchants introduced it to Europe during the 16th century.
-                        During the 17th century, drinking tea became fashionable among Britons,
-                        who started large-scale production and commercialization of the plant in India to bypass the Chinese monopoly.
                     </p>
                     <p id="remind" class="remind">Drag the seed into the soil, see what happen..</p>
                 </div>
         </div>
-        <div class="col-md-4">
+        <div id="operation" class="col-md-4 col-sm-5 img-thumbnail">
 
 
-            <div id="div1" style="text-align: center; width: 100%;height: 450px;padding: 10px;border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="div1" class="" ondrop="drop(event)" ondragover="allowDrop(event)">
 
                <img  id="soil"
                      src="img/soil.jpg" onmousedown="cutdown();" onmouseup="mouseup()"/>
@@ -202,23 +197,24 @@
 
         </div>
 
-        <div class="col-md-2" >
+        <div id="tools" class="col-md-2 col-sm-2" >
             <h3 class="tool">Your Tool</h3>
-            <img id="seed" src="img/teaseed.png" draggable="true" ondragstart="drag(event)" margin="10px" width="50" height="50"/>
+            <img id="seed" src="img/teaseed.png" class="col-md-12" draggable="true" ondragstart="drag(event)" margin="10px" width="50" height="70"/>
 
-            <img id="water0" src="img/water.png" draggable="true" ondragstart="drag(event)"   style="display: none;"  width="45" height="45"/>
+            <img id="water0" src="img/water.png" class="col-md-12" draggable="true" ondragstart="drag(event)" style="display: none;" margin="10px" width="50" height="70"/>
 
-            <img id="water1" src="img/water.png" draggable="true" ondragstart="drag(event)" style="display: none" width="45" height="45"/>
+            <img id="water1" src="img/water.png" class="col-md-12" draggable="true" ondragstart="drag(event)" style="display: none" margin="10px" width="50" height="70"/>
 
-            <img id="cut" src="img/cut.png" draggable="false" ondragstart="drag(event)"  style="display: none" width="45" height="45"/>
+            <img id="cut" src="img/cut.png" class="col-md-12" draggable="false" ondragstart="drag(event)"  style="display: none" margin="10px" width="50" height="70"/>
 
         </div>
+        <div class="col-md-1"></div>
 </div>
 
-<div class="container">
+<div class="container products">
     <hr>
     <div class="row text-center">
-        <div class="col-sm-4">
+        <div class="col-md-4 col-sm-4">
             <div class="thumbnail">
                 <img src="img/greentea.jpg" alt="Paris">
                 <p><strong>Green Tea</strong></p>
@@ -226,7 +222,7 @@
                 <button class="btn" onclick="turnGreen()">Check Processing</button>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4 col-sm-4">
             <div class="thumbnail">
                 <img src="img/blacktea.jpg" alt="New York">
                 <p><strong>Black Tea</strong></p>
@@ -234,7 +230,7 @@
                 <button class="btn" onclick="turnBlack()">Check Processing</button>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4 col-sm-4">
             <div class="thumbnail">
                 <img src="img/oolongtea.jpg" alt="San Francisco">
                 <p><strong>Oolong Tea</strong></p>
@@ -245,7 +241,7 @@
     </div>
 </div>
 
-<div id="myCarousel" class=" container carousel slide" data-ride="carousel" data-interval="false">
+<div id="myCarousel" class=" container carousel slide teaintroduce" data-ride="carousel" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -262,17 +258,13 @@
                 The ancient Chinese society first encountered the tea plant in what is now southern China and processed it as another medicinal herb for use
                 in Chinese herbology. The processing technique used to process fresh tea leaves was to immediately steam the fresh tea leaves and dry them for
                 preservation, which is likely the most ancient Chinese form of tea leaf processing. This processing method was perfected near the end of the
-                Han Dynasty (206 BCE-220 CE) and produced a dried tea that would be classified today as "green tea" and quite similar to modern Japanese sencha.
-                For consumption, dried tea leaves were either decocted with water around with other herbs, or ground into a powder to be taken straight or in a liquid.
+                Han Dynasty and produced a dried tea that would be classified today as "green tea" and quite similar to modern Japanese sencha.
             </p>
             <p>
                 With the increase of tea's use in Chinese herbology, production methods changed, where the processed green tea leaves were not immediately dried
                 after steaming. Rather the steamed tea leaves were first pulverized into a paste form, with the paste then formed in moulds and slowly dried into
                 brick tea, a technique well described by Lu Yu in his work The Classic of Tea. Tender leaves and leaf buds were generally not used, as older mature
-                tea leaves were preferred for tea production. Some tea bricks were also produced from mature whole leaves, which typically required the use of a
-                cooked rice slurry to bind the tea brick together.[1] The preference of producing tea in brick form possibly stems from the fact that it can be
-                more easily transported and stored.
-
+                tea leaves were preferred for tea production. 
             </p>
         </div>
 
@@ -286,11 +278,6 @@
                 then allowed them to dry under the sun, thus reaching full oxidation and producing "Gongfu" black tea.
                 When there was insufficient sun and temperatures were low, the withered leaves would be processed indoors
                 in warmed rooms and allowed to fully oxidize, then smoked dry over pine fires thus producing lapsang souchong.
-                According to oral traditions of the region, the discovery of lapsang souchong processing was due to military troops passing through
-                a Wuyi's tea factory during the last years of the Ming Dynasty, causing delays to tea leaf processing thus resulting
-                in a completely oxidized leaf that the producer salvaged by drying over a fire built from pine branches.
-                By the Qing Dynasty, both lapsang souchong and gongfu black tea were well recognized in China and noted in "Records on Yiwu mountain"
-                by the scholar Dong Tiangong.
             </p>
 
         </div>
@@ -307,11 +294,6 @@
             <p>
                 This tea's oxidation is stopped somewhere between the standards for green tea and black tea.
                 The processing typically takes two to three days from withering to drying[8] with a relatively short oxidation period of several hours.
-                In Chinese, semi-oxidized teas are collectively grouped as blue tea , while the term "oolong" is used specifically as a name for certain
-                semi-oxidized teas. Common wisdom about lightly oxidized teas in Taiwan (a large producer of Oolong) is that too little
-                oxidation upsets the stomach of some consumers. Even so, some producers attempt to minimize oxidation in order to produce
-                a specific taste or allow the tea leaves to be easily rolled into the spherical or half-sphere form demanded by buyers in the market.
-
             </p>
         </div>
         <a id="swiftleft" class="carousel-control" href="#myCarousel" role="button" data-slide="prev"> </a>

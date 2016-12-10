@@ -16,20 +16,31 @@ body > div {
  // padding: 7vw 0;
 }
 #banner {
-  height: 75vw;
+  height: 73vw;
   background-color: grey;
   padding-top: 0;
 }
 #banner img {
   height: 70vw;
 }
+#first, #second, #third{
+  position: absolute;
+  top: 15vw;
+}
+
 #pointer {
   position: absolute;
   z-index: 13;
   top: 75%;
   left: 44%;
-  /*485b24
-	E0EFD0*/
+
+}
+#pointer2 {
+  display: none;
+  position: absolute;
+  z-index: 13;
+  top: 87%;
+  left: 65%;
 }
 .btn-circle {
   width: 70px;
@@ -95,49 +106,104 @@ body > div {
     transform: scale(1);
   }
 }
-// #effect .subrow {
-//   display: flex;
-//   display: -webkit- flex;
-//   flex-wrap: wrap;
-//   -webkit-flex-wrap: wrap;
-//   justify-content: center;
-//   -webkit-justifiy-content: center;
-//   -webkit-align-items: center;
-//   align-items: center;
-//   align-content: stretch;
-//   -webkit-align-content: stretch;
-//   flex-direction: row;
-//   -webkit-flex-direction: row;
-// }
-// #effect img {
-//   background-color: white;
-//   height: 35vw;
-// }
-// #effect > div {
-//   text-align: center;
-// }
-// #effect .item,
-// #effect .item2 {
-//   padding: 2vw 0;
-//   display: flex;
-//   display: -webkit- flex;
-//   flex-wrap: wrap;
-//   -webkit-flex-wrap: wrap;
-//   justify-content: flex-start;
-//   -webkit-justifiy-content: flex-start;
-//   -webkit-align-items: center;
-//   align-items: center;
-//   align-content: stretch;
-//   -webkit-align-content: stretch;
-//   flex-direction: row;
-//   -webkit-flex-direction: row;
-// }
+
+
+#effect {
+  text-align:center;
+  padding: 3vw 0vw 0vw 0vw;
+
+  background: #f3de9e; /* For browsers that do not support gradients */
+  //background: -webkit-linear-gradient(#f3de9e, black); /* For Safari 5.1 to 6.0 */
+  //background: -o-linear-gradient(#f3de9e, black); /* For Opera 11.1 to 12.0 */
+  //background: -moz-linear-gradient(#f3de9e, black); /* For Firefox 3.6 to 15 */
+  //background: linear-gradient(#f3de9e, black); /* Standard syntax */
+}
+.spaceTitle{
+  
+}
+
+
+#happiness{
+  margin-top: 50px;
+  background-color: #3f3f3f;
+}
+#beauty{
+  margin-top: 50px;
+  background-color: #82553c;
+}
+#health{
+  margin-top: 50px;
+  background-color: #d0b76c;
+
+}
+#happiness .subpoint{
+  background-color: #3f3f3f;
+}
+#beauty .subpoint{
+  background-color: #82553c;
+}
+#health .subpoint{
+  background-color: #d0b76c;
+}
+.subpoint{
+   transform: translateY(-50%);
+    position: relative;
+    left: 30%;
+    width: 33vw;
+    height: 33vw;
+    margin-top: 15px;
+    padding: 4vw 1px;
+    border-radius: 100% !important;
+    border: 10px solid grey;
+    margin-bottom: -3vw;
+}
+.wrap {
+  text-align:center;
+}
+.table {
+  color: white;
+  height:100%;
+  width:100%;
+  margin-top:50px; 
+  
+}
+.table ul{
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+.table li {
+  list-style: none;
+  text-align:center;
+  padding-bottom: 2vw;
+}
+.top {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  justify-content: center;
+  -webkit-justifiy-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 2vw;
+}
+
 #recommandation {
   color: white;
   background-image: url("/TeaWorld/img/general/7.jpg");
   background-size: cover;
-  height: 70vw;
+  height: 170vw;
   
+}
+#recommandation .reTitle{
+  text-align: center;
 }
 #recommandation .mButton{
   background-color: rgba(0, 0, 0, 0.4);
@@ -153,21 +219,39 @@ body > div {
   border: 1px solid black !important;
 }
 #recommandation .selected{
-  padding-top: 6vw;
+  padding-top: 2vw;
 }
 #recommandation .item{
+  position: relative;
   margin: 2vw 7vw;
 }
-#recommandation #role, #area, #period, #result, #role2, #area2, #period2{
-  display: none;
-  
+#recommandation #gender, #weight, #period, #result, #gender2, #weight2, #period2,#genderm, #weightm, #periodm, #resultm, #gender2m, #weight2m, #period2m{
+  display: none; 
+}
+#recommandation .message{
+  border-radius: 30px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 #recommandation .chat{
-  background-color: green;
-  opacity: 0.6;
-  border: 1px solid;
-  border-radius: 20px;
-  margin: 2vw 0;
+  position: relative;
+}
+#recommandation .chat img{
+  height: 4vw;
+  // background-color: green;
+  // opacity: 0.6;
+  // border: 1px solid;
+  // border-radius: 20px;
+}
+#recommandation .chat2{
+  position: relative;
+}
+#recommandation .chat2 img{
+  height: 4vw;
+  // background-color: green;
+  // opacity: 0.6;
+  // border: 1px solid;
+  // border-radius: 20px;
 }
 #recommandation .formItem {
   margin-right: 0;
@@ -182,7 +266,13 @@ body > div {
   border: 1px solid white;
   box-shadow: 0 0 10px white;
 }
-#recommandation #result button{
+#recommandation #resultm{
+  padding-left: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  box-shadow: 0 0 10px white;
+}
+#recommandation #result a{
   margin: 1vw 0;
 }
 #recommandation #result > div{
@@ -191,21 +281,25 @@ body > div {
 #recommandation #result img{
   width: 100%;
 }
-#products{
-  background-color: black;
-  //opacity: 0.5;
-  z-index: 4;
+#recommandation #resultm a{
+  margin: 1vw 0;
 }
-#products .detail {
-  background-color: white;
-  opacity: 0.8;
+#recommandation #resultm > div{
+  padding-left: 0;
 }
-#products .proImg {
+#recommandation #resultm img{
   width: 100%;
 }
-#products .proImg img {
-  width: 100%;
+.recoM{
+  display: block;
 }
+.recoM .chat img{
+  height: 7vw !important;
+}
+.recom{
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   #banner {
     height: 53vw;
@@ -213,39 +307,78 @@ body > div {
   #banner img {
     height: 53vw;
   }
-  #effect .fontstyle2 h4 {
-    font-size: 3vw;
+  #happiness{
+    margin-top: 0px;
+    background-color: #3f3f3f;
   }
-  #effect .item {
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    -webkit-flex-wrap: nowrap;
+  #beauty{
+    margin-top: 0px;
+    background-color: #82553c;
   }
-  #effect .subtitle h3 {
-    font-size: 4vw;
+  #health{
+    margin-top: 0px;
+    background-color: #d0b76c;
+
   }
-  #effect img {
-    height: 11vw;
+  #effect .spaceTitle{
+    padding-top: 2vw;
+    padding-bottom: 7vw;
+  }
+  #effect .subpoint{
+    width: 13vw;
+    height: 13vw;
+  }
+  #effect .subpoint h4{
+    font-size: 90%;
   }
   #recommandation {
-    height: 63vw;
+    height: 83vw;
+  }
+  #recommandation .reTitle{
+    padding-top: 5vw;
+  }
+  #recommandation .reTitle h1{
+    font-size: 4vw;
+  }
+  #recommandation .reTitle button{
+    margin-top: 5vw;
   }
   #recommandation label {
     font-size: 2vw;
   }
+  #recommandation .message{
+    margin-top: 2vw;
+  }
+
 }
 @media only screen and (min-width: 992px) {
-  #effect p {
-    font-size: 1.4vw;
+  #effect .spaceTitle h1{
+      font-size: 400%;
   }
-  #effect .fontstyle2 h4 {
-    font-size: 1.6vw;
+  #first h3{
+  font-size: 300%;
+}
+#second h3{
+  font-size: 300%;
+}
+#third h3{
+  font-size: 300%;
+}
+  #pointer2 {
+    display: block;
+  }
+  .recoM{
+    display: none;
+  }
+  .recom{
+    display: block;
   }
   #recommandation {
     height: 55vw;
   }
-  #recommandation .fontstyle1 h1 {
-    font-size: 5vw;
+  #recommandation .message{
+    height: 36vw;
+    //margin-left: 2vw;
   }
   #products .proItem {
     display: flex;
