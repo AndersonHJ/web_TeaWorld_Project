@@ -29,24 +29,86 @@
             ev.target.appendChild(document.getElementById(data));
             if( document.getElementById("soil").src.endsWith("soil.jpg")){
                 document.getElementById("soil").src="img/seed1.jpg";
+                document.getElementById("water0").style.display = "inherit";
+
+                document.getElementById("title").innerHTML="Germinating Tea Seeds";
+                document.getElementById("p1").innerHTML="Use freshly harvested seeds. Soak them in water for 24 hours. You may want to use a bag made of cheesecloth to help submerge the seeds. After the soaking, empty the bag into the water and use a strainer to separate the “floaters” from the “sinkers.” Use the sinkers as your primary batch for sowing. The floaters," +
+                        " which may germinate but could become weaker plants, should be labeled as such and separated for follow-up growth observation";
+                document.getElementById("p2").innerHTML="Spread the seeds on a tarp or a plastic nursery flat in full sun and keep them moist with frequent sprays of water. Plant seeds that after a day or two have developed a crack in the seed coat. Sow the seed with its 'eye' (the hilum) in a horizontal position (parallel to the surface of the medium). Bury it under 1 inch of medium. Use a medium that has good drainage. Coarse vermiculite has both excellent moisture-holding capacity and good drainage. Keep newly planted seeds under shade (shadecloth rated 80%), and keep the medium moist. Seeds will germinate in about 1–2 months.";
+                document.getElementById("remind").innerHTML="Your seed has getminated, give it some water!";
                 return;
             }
             if( document.getElementById("soil").src.endsWith("seed1.jpg")){
                 document.getElementById("soil").src="img/seed.gif";
+                document.getElementById("water1").style.display = "inherit";
+
+                document.getElementById("title").innerHTML="Growing Up of Tea Tree";
+                document.getElementById("p1").innerHTML="After three to four leaves have developed, the roots should be fairly well established." +
+                        " Move plants to 30–40% shade. You may apply a few granules of slow-release fertilizer " +
+                        " and a light dose (half the strength recommended on the label)of a foliar fertilizer formulated for “acid-loving plants." +
+                        " Soluble formulations for azalea, camellia, gardenia, and rhododendron are suitable and usually have NPK in the ratio 3:1:1" +
+                        " , plus micronutrients. As the seedling develops, gradually move it to full sun in preparation for" +
+                        " transplanting when it is about 1 foot tall.";
+                document.getElementById("p2").innerHTML="Like fine wine, the quality, flavor, and aroma of tea is influenced by its growing conditions." +
+                        " Some of the finest tea in the world is usually grown at high elevations with ample rainfall year round. (at least 40 inches)." +
+                        " You'll often find that some of the best teas to drink are grown in areas of high elevation on the side of hills where they will get" +
+                        " the moisture they need, but where any excess water will drain off. Many teas are often grown in areas where the humidity is relatively" +
+                        " high and the air is constantly moist.";
+                document.getElementById("remind").innerHTML="More water, it will grow faster!";
                 return;
             }
             if( document.getElementById("soil").src.endsWith("seed.gif")){
                 document.getElementById("soil").src="img/stem1.gif";
+                document.getElementById("soil").style.cursor='url(img/cut.png) 4 6, auto';
+                document.getElementById("cut").style.display = "inherit";
+
+                document.getElementById("title").innerHTML="Harvesting of Tea";
+                document.getElementById("p1").innerHTML="When plucking the leaves, pick young shoots with 2-3 leaves (bud and the second and third leaves)." +
+                        " This is called fine plucking. If more leaves are taken with the bud it is called coarse plucking and produces a lower quality tea. " +
+                        "Tea is harvested by hand, not all leaves are picked during harvesting but only a few top young and juicy leaves with a portion of the stem" +
+                        "on which they have grown and the so-called bud (or tip) – an unexpanded leaf at the end of the shoot.A few leaves, part of the stem and a tip are called 'flush'." +
+                        " Flush is the basis of tea production. Flush with two or three leaves is called 'golden flush'. Flushes are collected with three, four and even five leaves.";
+                document.getElementById("p2").innerHTML="Tea is cultivated solely for the purpose of leaves. They are collected as many times per year as tea plant " +
+                        "vegetates, i.e. produces new shoots with leaves. In Indonesia, Sri Lanka, Kenya, the south of India and China summer is all year round." +
+                        " The further north the plantations are located the shorter is tea harvesting season: in North-Eastern India it lasts eight months," +
+                        " in the North of China tea leaves are harvested up to four times a year from April till September.";
+                document.getElementById("remind").innerHTML="It's the time to harvest!";
+                return;
             }
+
         }
 
         function cutdown(){
-           document.getElementById("soil").style.cursor="url('img/cut0.png') 4 6, auto";
-            var scrollX = window.event.clientX;
-            var scrollY = window.event.clientY;
-            document.getElementById("mouselocation").innerHTML='x:'+scrollX+  ' y:'+scrollY;
-            //alert("x:"+scrollX+ "   y:"+scrollY);
+
+            if( document.getElementById("soil").src.endsWith("stem1.gif")||document.getElementById("soil").src.endsWith("dropdown1.gif")) {
+                document.getElementById("soil").style.cursor="url('img/cut0.png') 4 6, auto";
+                document.getElementById("soil").src = "img/dropdown1.gif";
+            }
+
         }
+        function mouseup(){
+             if( document.getElementById("soil").src.endsWith("stem1.gif")||document.getElementById("soil").src.endsWith("dropdown1.gif")){
+                 document.getElementById("soil").style.cursor='url(img/cut.png) 4 6, auto';
+                }
+
+        }
+
+        function turnGreen(){
+            document.getElementById("greenblock").className="item textslide active";
+            document.getElementById("blackblock").className="item textslide";
+            document.getElementById("oolongblock").className="item textslide";
+        }
+        function turnBlack(){
+            document.getElementById("greenblock").className="item textslide";
+            document.getElementById("blackblock").className="item textslide  active";
+            document.getElementById("oolongblock").className="item textslide";
+        }
+        function turnOolong(){
+            document.getElementById("greenblock").className="item textslide";
+            document.getElementById("blackblock").className="item textslide";
+            document.getElementById("oolongblock").className="item textslide  active";
+        }
+
     </script>
     <style>
         .carousel-inner > .item > img,
@@ -54,9 +116,24 @@
             width: 70%;
             margin: auto;
         }
-        .carousel-control.carousel-control-width5{
-            width:5%;
+          .remind{
+            margin-top: 30px;
+            color:orangered;
+            font-size: x-large;
+            font-weight: 500;
         }
+        .tool{
+            color: #5b9a00;
+        }
+        .textframe{
+            padding:15px;
+        }
+        .textslide{
+            padding:15px;
+            width: 100%;
+            height: 300px;
+        }
+
     </style>
     <title>Detail</title>
 </head>
@@ -88,46 +165,162 @@
 <br>
 <br>
 <br>
-<div class="container">
-    <ol class="breadcrumb">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="#">Category</a></li>
-        <li><a href="#">SubCategory</a></li>
-        <li class="active">ProductDetail</li>
-    </ol>
-</div>
+<br>
+<br>
+<br>
+
 
 <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
-
-            <iframe class="" width="100%" height="450" src="https://www.youtube.com/embed/Yi-nhnWIcAU?autoplay=0" frameborder="1" allowfullscreen></iframe>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+                <div class="textframe">
+                    <h3 id="title">Inroduction of Tea</h3>
+                    <p id="p1">Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis,
+                        an evergreen shrub native to Asia. After water, it is the most widely consumed drink in the world.
+                        There are many different types of tea; some teas, like Darjeeling and Chinese greens, have a cooling, slightly bitter, and astringent flavour,
+                        while others have vastly different profiles that include sweet, nutty, floral or grassy notes.
+                    </p >
+                    <p id="p2">
+                        Tea originated in Southwest China, where it was used as a medicinal drink. It was popularized as a recreational drink during the Chinese Tang dynasty,
+                        and tea drinking spread to other East Asian countries. Portuguese priests and merchants introduced it to Europe during the 16th century.
+                        During the 17th century, drinking tea became fashionable among Britons,
+                        who started large-scale production and commercialization of the plant in India to bypass the Chinese monopoly.
+                    </p>
+                    <p id="remind" class="remind">Drag the seed into the soil, see what happen..</p>
+                </div>
         </div>
         <div class="col-md-4">
 
 
             <div id="div1" style="text-align: center; width: 100%;height: 450px;padding: 10px;border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">
 
-               <img  id="soil" style="cursor: url('img/cut.png') 4 6, auto"
-                     src="img/soil.jpg" onmousedown="cutdown();" onmouseup="this.style.cursor='url(img/cut.png) 4 6, auto';"/>
+               <img  id="soil"
+                     src="img/soil.jpg" onmousedown="cutdown();" onmouseup="mouseup()"/>
             </div>
 
 
 
         </div>
 
-        <div class="col-md-2">
-            <p>Drag Your Seed Into the Filed</p>
-            <img id="seed" src="img/teaseed.png" draggable="true" ondragstart="drag(event)" width="50" height="50"/>
-            <br>
-            <img id="water" src="img/water.png" draggable="true" ondragstart="drag(event)" width="45" height="45"/>
-            <br>
-            <img id="water1" src="img/water.png" draggable="true" ondragstart="drag(event)" width="45" height="45"/>
-            <p id="mouselocation"></p>
+        <div class="col-md-2" >
+            <h3 class="tool">Your Tool</h3>
+            <img id="seed" src="img/teaseed.png" draggable="true" ondragstart="drag(event)" margin="10px" width="50" height="50"/>
+
+            <img id="water0" src="img/water.png" draggable="true" ondragstart="drag(event)"   style="display: none;"  width="45" height="45"/>
+
+            <img id="water1" src="img/water.png" draggable="true" ondragstart="drag(event)" style="display: none" width="45" height="45"/>
+
+            <img id="cut" src="img/cut.png" draggable="false" ondragstart="drag(event)"  style="display: none" width="45" height="45"/>
+
         </div>
 </div>
 
+<div class="container">
+    <hr>
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="img/greentea.jpg" alt="Paris">
+                <p><strong>Green Tea</strong></p>
 
+                <button class="btn" onclick="turnGreen()">Check Processing</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="img/blacktea.jpg" alt="New York">
+                <p><strong>Black Tea</strong></p>
+
+                <button class="btn" onclick="turnBlack()">Check Processing</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <img src="img/oolongtea.jpg" alt="San Francisco">
+                <p><strong>Oolong Tea</strong></p>
+
+                <button class="btn" onclick="turnOolong()">Check Processing</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myCarousel" class=" container carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div id="greenblock" class="item textslide active">
+            <h3>Green Tea</h3>
+            <p>
+                The ancient Chinese society first encountered the tea plant in what is now southern China and processed it as another medicinal herb for use
+                in Chinese herbology. The processing technique used to process fresh tea leaves was to immediately steam the fresh tea leaves and dry them for
+                preservation, which is likely the most ancient Chinese form of tea leaf processing. This processing method was perfected near the end of the
+                Han Dynasty (206 BCE-220 CE) and produced a dried tea that would be classified today as "green tea" and quite similar to modern Japanese sencha.
+                For consumption, dried tea leaves were either decocted with water around with other herbs, or ground into a powder to be taken straight or in a liquid.
+            </p>
+            <p>
+                With the increase of tea's use in Chinese herbology, production methods changed, where the processed green tea leaves were not immediately dried
+                after steaming. Rather the steamed tea leaves were first pulverized into a paste form, with the paste then formed in moulds and slowly dried into
+                brick tea, a technique well described by Lu Yu in his work The Classic of Tea. Tender leaves and leaf buds were generally not used, as older mature
+                tea leaves were preferred for tea production. Some tea bricks were also produced from mature whole leaves, which typically required the use of a
+                cooked rice slurry to bind the tea brick together.[1] The preference of producing tea in brick form possibly stems from the fact that it can be
+                more easily transported and stored.
+
+            </p>
+        </div>
+
+        <div id="blackblock" class="item textslide">
+            <h3>Black Tea</h3>
+            <p>
+                The technique for producing black tea was first developed during the late Ming Dynasty Wuyishan,
+                Fujian either resulting from the over-oxidation of tea-leaves during the manufacture of oolong tea
+                or indirectly from the methods of manufacturing green and white teas.
+                In the early 1600s, tea producers in the Wuyi Mountains began kneading the sun-withered tea leaves to macerate them,
+                then allowed them to dry under the sun, thus reaching full oxidation and producing "Gongfu" black tea.
+                When there was insufficient sun and temperatures were low, the withered leaves would be processed indoors
+                in warmed rooms and allowed to fully oxidize, then smoked dry over pine fires thus producing lapsang souchong.
+                According to oral traditions of the region, the discovery of lapsang souchong processing was due to military troops passing through
+                a Wuyi's tea factory during the last years of the Ming Dynasty, causing delays to tea leaf processing thus resulting
+                in a completely oxidized leaf that the producer salvaged by drying over a fire built from pine branches.
+                By the Qing Dynasty, both lapsang souchong and gongfu black tea were well recognized in China and noted in "Records on Yiwu mountain"
+                by the scholar Dong Tiangong.
+            </p>
+
+        </div>
+
+        <div id="oolongblock" class="item textslide">
+            <h3>Oolong Tea</h3>
+            <p>
+                The Qing Dynasty was also the period when oolong tea was first developed in the Fujian province.
+                It was originally produced in thin brick form, known then under then name "Beiyuan" tea.
+                The importance of the withering process for producing oolong tea was described by poet Huang Furen in his poem,
+                which indicated that the processing of tea leaves is not a simple task, requiring the scaling of steep cliffs to pick the choicest leaves
+                and the withering of the leaves under the sun and warm winds.
+            </p>
+            <p>
+                This tea's oxidation is stopped somewhere between the standards for green tea and black tea.
+                The processing typically takes two to three days from withering to drying[8] with a relatively short oxidation period of several hours.
+                In Chinese, semi-oxidized teas are collectively grouped as blue tea , while the term "oolong" is used specifically as a name for certain
+                semi-oxidized teas. Common wisdom about lightly oxidized teas in Taiwan (a large producer of Oolong) is that too little
+                oxidation upsets the stomach of some consumers. Even so, some producers attempt to minimize oxidation in order to produce
+                a specific taste or allow the tea leaves to be easily rolled into the spherical or half-sphere form demanded by buyers in the market.
+
+            </p>
+        </div>
+        <a id="swiftleft" class="carousel-control" href="#myCarousel" role="button" data-slide="prev"> </a>
+        <a id="swiftright" style="opacity: 0" class="right carousel-control" href="#myCarousel" role="button" data-slide="next"></a>
+
+    </div>
+
+
+</div>
 
 
 </body>

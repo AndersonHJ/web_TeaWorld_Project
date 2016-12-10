@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>cartlist</title>
+
+</head>
+
+<body>
+
+
+<!-- begin:content -->
+<div class="container">
+          <!-- begin:article -->
+    <div class="row">
+        <!-- begin:sidebar -->
+        <div class="col-md-3 col-sm-4 sidebar">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h3>Cart</h3>
+                        </div>
+                        <ul class="cart list-unstyled">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-7 col-xs-7">1 <a href="product_detail.html">Longjing Tea</a> </div>
+                                    <div class="col-sm-5 col-xs-5 text-right"><strong>$54.00</strong> <a href="#"><i class="fa fa-trash-o"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-7 col-xs-7">1 <a href="product_detail.html">Flower tea</a> </div>
+                                    <div class="col-sm-5 col-sm-5 text-right"><strong>$26.00</strong> <a href="#"><i class="fa fa-trash-o"></i></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled total-price">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-8 col-xs-8">Shipping</div>
+                                    <div class="col-sm-4 col-xs-4 text-right">$1.00</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-8 col-xs-8">Total</div>
+                                    <div class="col-sm-4 col-xs-4 text-right">$71.00</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-6 col-xs-6">
+                                        <a class="btn btn-default" href="cart.html">Cart</a>
+                                    </div>
+                                    <div class="col-sm-6 col-xs-6 text-right">
+                                        <a class="btn btn-primary" href="login.html">Checkout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- break -->
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h3>Navigation</h3>
+                        </div>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#">Cart</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Product List</a></li>
+                            <li><a href="#">???</a></li>
+                        </ul>
+                    </div>
+                    <!-- break -->
+
+                </div>
+            </div>
+        </div>
+        <!-- end:sidebar -->
+
+        <!-- begin:content -->
+        <div class="col-md-9 col-sm-8 content">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Your Cart</h3>
+                    <hr />
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Description</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><img width="100" src="img/longjing1.jpg" class="img-cart" /></td>
+                            <td><strong>BlackBox</strong><p>Size : 26</p></td>
+                            <td>
+                                <form class="form-inline">
+                                    <input class="form-control" type="text" value="1" />
+                                    <button rel="tooltip" title="Update" class="btn btn-default"><i class="fa fa-pencil"></i></button>
+                                    <a href="#" class="btn btn-primary" rel="tooltip" title="Delete"><i class="fa fa-trash-o"></i></a>
+                                </form>
+                            </td>
+                            <td>$54.00</td>
+                            <td>$54.00</td>
+                        </tr>
+                        <tr>
+                            <td><img width="100" src="img/tea-1.jpg" class="img-cart" /></td>
+                            <td><strong>JunkShirt</strong><p>Size : M</p></td>
+                            <td>
+                                <form class="form-inline">
+                                    <input class="form-control" type="text" value="2" />
+                                    <button rel="tooltip" title="Update" class="btn btn-default"><i class="fa fa-pencil"></i></button>
+                                    <a href="#" class="btn btn-primary" rel="tooltip" title="Delete"><i class="fa fa-trash-o"></i></a>
+                                </form>
+                            </td>
+                            <td>$16.00</td>
+                            <td>$32.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right">Total Product</td>
+                            <td>$86.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right">Total Shipping</td>
+                            <td>$2.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-right"><strong>Total</strong></td>
+                            <td>$88.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a href="categories.html" class="btn btn-default">Continue Shopping</a>
+                    <a href="checkout.html" class="btn btn-primary pull-right">Next</a>
+                </div>
+            </div>
+        </div>
+        <!-- end:content -->
+    </div>
+    <!-- end:article -->
+
+
+
+
+
+</div>
+<!-- end:content -->
+
+
+
+</body>
+</html>
