@@ -239,15 +239,17 @@ backQ = function(){
 	for(var i = 0; i<elems.length; i++){
 		elems[i].style.display = 'none';
 	}
-
+	console.log(ques+" | "+nextq);
    	var pre = document.getElementById(ques);
 	pre.style.display = 'block';
 
-	var ele = document.getElementById(nextq);
+	var ele = document.getElementById(nextq+"2");
 	ele.style.display = 'none';
 	ele.style.left = '0vw';
 	
-	
+	var ele2 = document.getElementById(ques+"3");
+	ele2.style.display = 'none';
+	//ele.style.left = '0vw';
 	
 }
 

@@ -33,3 +33,11 @@ li{
     height:300px;
     overflow-y: scroll;
 }
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+.carousel-control.carousel-control-width5{
+    width:5%;
+}

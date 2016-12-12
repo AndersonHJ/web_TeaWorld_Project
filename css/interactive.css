@@ -1,4 +1,18 @@
-
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width:80%;
+    height: auto;
+    margin: auto;
+}
+.carousel-control.carousel-control-width5{
+    width:3%;
+}
+.row{
+    padding: 0;
+}
+.prod li{
+    font-size: 18px;
+}
 #navigation{
 	background-color: rgba(0, 0, 0, 1);
 }
@@ -48,6 +62,9 @@
 	color:white;
 	border: 0px;
 	
+}
+.prod .cont select{
+	color: black;
 }
 .carousel-inner > .item > img{
 	width: 100% !important;
